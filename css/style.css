@@ -16,8 +16,9 @@ body {
     overflow: hidden;
 }
 
-ul, ol {
-}
+ul,
+ol {}
+
 /***************************
 Header
 ***************************/
@@ -26,35 +27,43 @@ Header
     background: url("../img/pattern.png") repeat;
     background-color: #333333;
 }
+
 .main-title {
     display: flex;
     align-items: center;
 }
+
 .main-title svg {
     margin: 6px 6px 6px 0;
     fill: #3FA9F5;
     height: 32px;
 }
+
 .main-title h1 {
     margin: 0;
     color: #FFFFFF;
 }
+
 .nav {
     margin-left: auto;
 }
+
 .nav li {
     display: inline;
     padding: 0 12px 0 12px;
 }
+
 .nav a {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
+
 a.active {
     color: #3FA9F5;
 }
+
 a:hover {
     color: #3FA9F5;
 }
@@ -77,19 +86,23 @@ a:hover {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
 }
+
 .main-content .info {
     width: 30%;
     font-size: 1.2vw;
     margin-left: 5vw;
 }
-.main-content .info ul{
+
+.main-content .info ul {
     text-decoration: none;
     list-style: none;
     line-height: 1.5;
 }
-.main-content .info span{
+
+.main-content .info span {
     color: #FFFFFF;
 }
+
 /*
 #main-container {
     max-width: 1400px;
@@ -119,4 +132,4 @@ a:hover {
         margin-left: 86px;
         font-size: 17px;
     }
-  }
+}
