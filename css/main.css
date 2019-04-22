@@ -47,6 +47,11 @@ ol {
     text-align: center;
 }
 
+.by {
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+}
 /***************************
 Header
 ***************************/
