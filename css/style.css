@@ -1,203 +1,214 @@
+/*******************************
+  Font Defaults
+*******************************/
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url("../fonts/Bahnschrift/Bahnschrift.eot");
+  src: url("../fonts/Bahnschrift/Bahnschrift.eot?#iefix") format("embedded-opentype"), url("../fonts/Bahnschrift/Bahnschrift.svg#Bahnschrift") format("svg"), url("../fonts/Bahnschrift/Bahnschrift.ttf") format("truetype"), url("../fonts/Bahnschrift/Bahnschrift.woff") format("woff"), url("../fonts/Bahnschrift/Bahnschrift.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /***************************
 Global
 ***************************/
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Bahnschrift';
+  margin: 0;
+  padding: 0;
 }
-/***Tag Defaults**/
+
 body {
-    background-color: #333333;
+  background: #365794;
 }
 
-h1 {
-    color: #FFFFFF;
-    padding: 0 12px 0 12px;
+body .section {
+  padding: 24px 8px 84px 8px;
 }
 
-h2 {
-    font-size: 28px;
-    padding-bottom: 48px;
+body .main-section:nth-child(odd) {
+  background-color: #FFFFFF;
 }
 
-h3 {
-    font-size: 22px;
-    padding: 22px 0 4px 0;
+body .main-section:nth-child(even) {
+  background-color: #F5F5F5;
 }
 
-p {
-    font-size: 20px;
-    text-align: justify;
-}
-
-ul,
-ol {
-    line-height: 1.5;
-    padding: 0 18px 0 18px;
-    font-size: 20px;
-}
-
-/***Class Defaults**/
-.section {
-    padding: 92px;
-}
-
-.container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 1600px;
-}
-
-.content {
-    width: 100%;
-}
-
-.pictures {
-    padding-top: 42px;
-    text-align: center;
-}
-
-.content a {
-    color: #3FA9F5;
-}
-
-.by {
-    padding-top: 24px;
-}
-
-.play {
-    width: 80%;
-    padding-top: 52px;
-    fill: #3FA9F5;
-}
-
-/***************************
-Header
-***************************/
-#nav {
-    background-color: #333333;
-    padding: 0px;
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    border-bottom: 3px solid rgb(90, 90, 90);
-}
-
-#nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#nav-title {
-    display: inherit;
-    align-items: inherit;
-    padding: 0 12px 0 12px;
-}
-
-#title-svg {
-    padding: 12px 0 12px 0;
-    fill: #3FA9F5;
-    height: 32px;
-}
-
-.site-nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    padding: 0 12px 0 12px;
-}
-
-a.active {
-    color: #3FA9F5;
-}
-
-a:hover {
-    color: #3FA9F5;
+body .container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 77vw;
 }
 
 /***************************
 Basic Info
 ***************************/
 #basic-info {
-    background-color: #3FA9F5;
-    padding: 0;
+  position: relative;
+  -webkit-box-shadow: 0 1vw 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1vw 0 rgba(255, 255, 255, 0.1);
+  background-size: 6vw 6vw;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.1vw, rgba(255, 255, 255, 0.05)), color-stop(0.1vw, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(0.1vw, rgba(255, 255, 255, 0.05)), color-stop(0.1vw, transparent));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 0.1vw, transparent 0.1vw), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0.1vw, transparent 0.1vw);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 42vw;
 }
 
 #basic-info-container {
-    flex-direction: row;
+  position: relative;
+  display: block;
+  height: 100%;
 }
 
-#basic-info-content {
-    padding-left: 14px;
-    color: #FFFFFF;
-    width: 70%;
+#basic-info-container #map-svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  fill: #6c9;
 }
 
-#header-img {
-    background: url("../img/maria.png") no-repeat center;
-    background-size: cover;
-    margin-left: auto;
-    width: 100%;
-    height: 60vw;
-    max-height: 650px;
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+#basic-info-container #map-svg:hover {
+  fill: #6c9;
+  stroke: #73d69b;
+  stroke-width: 0.8%;
+  stroke-linecap: inherit;
+}
+
+#basic-info-container #svg-hurricane-1 {
+  position: absolute;
+  right: 33%;
+  top: 80%;
+  width: 5%;
+  -webkit-animation: spin linear 1s infinite;
+          animation: spin linear 1s infinite;
+}
+
+#basic-info-container h1 {
+  color: white;
+  float: right;
+  padding: 1.5vw 0;
+  font-size: 8vw;
+  margin: 0;
+  text-shadow: 0 0.5vw 0 rgba(0, 0, 0, 0.2);
+}
+
+#basic-info-container h1 span {
+  color: #66CC99;
+  text-shadow: .5vw 0 0 #44AA77;
+}
+
+#banner-content-container {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  color: white;
+}
+
+#banner-content-container h2 {
+  padding: 0 1vw;
+  font-size: 6vw;
+  line-height: 3vw;
+  text-align: justify;
+  color: #66CC99;
+  text-shadow: 0 .3vw 0 #44AA77;
+}
+
+#banner-content-container h2:first-of-type {
+  border-bottom: .15vw solid white;
+}
+
+#banner-content-container h2:last-of-type {
+  border-top: .15vw solid white;
+}
+
+#banner-content-container h2 span {
+  line-height: 5vw;
+  font-size: 2.2vw;
+  color: white;
+  text-shadow: none;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /***************************
 Overview
 ***************************/
 #overview {
-    background-color: #FFFFFF;
+  z-index: -1;
+  position: relative;
+  background-color: #365794;
+  padding-top: 12px;
 }
 
 /***************************
 General Science
 ***************************/
 #general-science {
-    background-color: #3FA9F5;
-    color: #FFFFFF;
+  background-color: #53b2f7;
+  color: #FFFFFF;
 }
 
 /***************************
 Maria Science
 ***************************/
 #maria-science {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 /***************************
 Population
 ***************************/
 #population {
-    background-color: #3FA9F5;
-    color: #FFFFFF;
+  background-color: #3FA9F5;
+  color: #FFFFFF;
 }
 
 /***************************
 Economy
 ***************************/
 #economy {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 /***************************
 Statistics
 ***************************/
 #statistics {
-    background-color: #3FA9F5;
-    color: #FFFFFF;
+  background-color: #3FA9F5;
+  color: #FFFFFF;
 }
 
 /***************************
 Sources
 ***************************/
 #sources {
-    background-color: #333333;
-    color: #FFFFFF;
+  background-color: #333333;
+  color: #FFFFFF;
 }
+/*# sourceMappingURL=style.css.map */
